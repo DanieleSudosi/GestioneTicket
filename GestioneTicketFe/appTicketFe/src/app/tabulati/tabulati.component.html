@@ -1,0 +1,54 @@
+<div class="container">
+  <h3 class="text-info text-center">Tabulati Matricole</h3>
+
+  <hr style="
+    height: 5px;
+    background: teal;
+    margin: 20px 0;
+    box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 1);
+    " />
+
+
+  <div class="row">
+    <div class="col-1">
+      <a class="text-black" routerLink="/"><img src="../../assets/home.png" alt="" style="height: 2rem;"></a>
+    </div>
+    <div class="col-1">
+      <a class="text-black" routerLink="/matricola"><img src="../../assets/aggiungi.png" alt=""
+          style="height: 2rem;"></a>
+    </div>
+    <div class="col-8">
+      <div class="input-group border-3">
+        <input type="number" class="form-control border border-start" placeholder="Ricerca numero Matricola" [(ngModel)]="numMat">
+        <div class="input-group-append">
+          <button class="input-group-text border border-start " id="basic-addon2" (click)="getByNumMatricola()">Cerca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr style="
+        height: 5px;
+        background: teal;
+        margin: 20px 0;
+        box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 1);
+      " />
+
+
+  <h2 class="text-success m-3 text-center">Lista delle matricole</h2>
+  <div class="col-auto">
+    <div *ngFor="let matricola of matricole" class="card d-inline-flex m-5 border border-start bg-secondary" style="width: 20rem">
+      <div class="card-body bg-gradient text-center">
+        <h5 class="card-title m-3">Numero Matricola: </h5>
+        <h6 class="text-center custom border border-start">{{matricola.numMatricola}}</h6>
+        <p class="card-text">
+          <strong>{{matricola.nome}} - {{matricola.cognome}}</strong>
+        </p>
+        <p class="card-text">
+          <strong>nato il: </strong> {{matricola.dataNascita}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="container">
+  <h3 class="text-info text-center">Videata gestione Ticket</h3>
+  <hr style="
+    height: 5px;
+    background: teal;
+    margin: 20px 0;
+    box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 1);
+    " />
+  <a class="text-black" routerLink="/"><img src="../../assets/home.png" alt="" style="height: 2rem;"></a>
+
+  <hr style="
+height: 5px;
+background: teal;
+margin: 20px 0;
+box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 1);
+" />
+
+
+  <form [formGroup]="form">
+    <!--[formGroup]="form" -->
+    <div class="row">
+      <div class="col">
+        <label for="dataRiferimento"> Inserisci una data</label>
+        <input type="date" class="form-control" name="dataRiferimento" formControlName="dataRiferimento">
+        <!--formControlName="meseAnno"-->
+      </div>
+      <div class="col">
+        <label for="numMatricola">Numero della matricola</label>
+        <input type="text" class="form-control" placeholder="Inserisci il numero" name="numMatricola"
+          formControlName="numMatricola">
+        <!--formControlName="numMatricola"-->
+      </div>
+      <div class="col">
+        <label for="dataRiferimento">Ore di Ferie/Permessi/Malattia</label>
+        <input type="text" class="form-control" value="0" formControlName="feriePermessiMalattia">
+        <!--formControlName="feriePermessiMalattia"-->
+      </div>
+    </div>
+    <div class="row text-center m-3">
+      <div class="col ">
+        <input type="search" class="btn btn-dark" placeholder="elabora" (click)="elabora()" />
+
+      </div>
+    </div>
+  </form>
+
+  <hr style="
+height: 5px;
+background: teal;
+margin: 20px 0;
+box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 1);
+" />
+  <div class="d-flex justify-content-center">
+    <div class="row">
+      <div class="col-auto text-center">
+        <div class="card text-bg-primary mb-3 " style="max-width: 20rem;">
+          <div class="card-header">Erogazione Ticket</div>
+          <div class="card-body">
+            <!-- <p class="card-text">Nel mese: {{ticket.meseAnno}}</p> -->
+            <p class="card-text">Il numero di <img src="../../assets/tr.jpg" alt="" style="height: 3rem;"> da Erogare  è:</p>
+          </div>
+          <div class="card-footer">
+            <strong>{{ticketDaErogare}}</strong>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

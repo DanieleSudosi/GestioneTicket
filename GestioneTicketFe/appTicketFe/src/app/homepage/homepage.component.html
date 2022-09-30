@@ -1,0 +1,50 @@
+<div class="container">
+  <h3 class="text-center">Gestionale dei Ticket per i dipendenti</h3>
+
+  <hr style="
+    height: 5px;
+    background: teal;
+    margin: 20px 0;
+    box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 1);
+    " />
+
+  <div class="row">
+    <div class="col-6 text-center">
+      <button class="btn btn-success col-3" routerLink="/videata">Videata</button>
+    </div>
+    <div class="col-6 text-center">
+      <button class="btn btn-secondary col-3" routerLink="/tabulati">Matricole</button>
+    </div>
+  </div>
+
+  <hr style="
+    height: 5px;
+    background: teal;
+    margin: 20px 0;
+    box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 1);
+    " />
+
+  <div class="bg-image p-5  shadow-1-strong rounded mb-5 text-white"
+    style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');">
+    <h1 class="mb-3 h2">Gestione Ticket</h1>
+
+    <p class="font-monospace">
+      Si richiede di scrivere un programma che estragga il num di Ticket relativi il mese precedente che spettano al
+      dipendente<br>
+      Predisporre una videata con i seguenti campi in input:<br>
+      -Data di riferimento:.....(campo obbligatorio prevalorizzato con data odierna)<br>
+      -N. Matricola:.....(campo obbligatorio)<br>
+      -Ore Ferie/Permessi/Malattia:...(campo facoltativo preimpostato a zero)<br>
+
+      <br>
+      Dal pulsante "ELABORA" il programma calcola ed effettua il salvataggio dati<br>
+      -calcolare i gg lavorativi(trasformarli in ore) del mese precedente alla Data di riferimento inserita
+      (escludere festività- patrono) es Agosto 2022 = 22 gg lavorativi<br>
+      -se presenti sottrarre ore ferie,permessi,malattia indicate in input<br>
+      -considerare il residuo ore mese precedente(caso num.ore minore di 8 per avere 1 ticket) <br>
+
+    </p>
+  </div>
+
+</div>
+<router-outlet></router-outlet>
